@@ -12,7 +12,7 @@ def hello2():
 @app.route('/testme')
 def home():
     return 'success'
-'''
+
 @app.route('/simulate',methods=['POST'])
 def recommend():
     df_result=get_recommendation(request)
@@ -21,4 +21,4 @@ def recommend():
 if __name__=='__main__':
     app.run(debug=True)
 
-'''
+

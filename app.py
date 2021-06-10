@@ -6,8 +6,8 @@ from flask import Flask,request,jsonify
 app = Flask(__name__)
 
 @app.route("/")
-def hello():
-    return "Hello again, Universal!"
+def hello2():
+    return "Hello2 again, Universal!"
 
 @app.route('/testme')
 def home():

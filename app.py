@@ -1,8 +1,8 @@
 '''
-from flask import Flask, request, make_response
+from flask import Flask, request, make_response, json
 '''
 
-from flask import Flask,request,jsonify
+from flask import Flask,request,jsonify, json
 app = Flask(__name__)
 
 @app.route("/")
@@ -12,6 +12,11 @@ def hello2():
 @app.route('/testme')
 def home():
     return 'success'
+
+companies = [{"id":11,"name":"Jack"},{"id":22,"name":"Jill"}]
+@app.route('/companies', methods=['GET'])
+def getcos():
+    return json.dumps(companies)
 
 @app.route('/simulate',methods=['POST'])
 def recommend():
